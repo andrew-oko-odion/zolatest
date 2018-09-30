@@ -1,0 +1,98 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API V1",
+    "version": "v1"
+  },
+  "definitions": {
+    "createContact": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "object",
+          "required": [
+            "name",
+            "country_code",
+            "exchange_rate",
+            "currency_code",
+            "population_density"
+          ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "example": "United State"
+            },
+            "exchange_rate": {
+              "type": "decimal",
+              "example": "14.229393"
+            },
+            "currency_code": {
+              "type": "string",
+              "example": "USD"
+            },
+            "country_code": {
+              "type": "string",
+              "example": "NGN"
+            },
+            "population_density": {
+              "type": "integer",
+              "example": "288182882"
+            }
+          }
+        }
+      }
+    }
+  },
+  "paths": {
+    "/countries": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Return all the available countries"
+          }
+        },
+        "tags": [
+          "countries"
+        ],
+        "summary": "Get countries",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/countries/{id}": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Return the selected country"
+          },
+          "404": {
+            "description": "Country not found"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true,
+            "description": "Country ID"
+          }
+        ],
+        "tags": [
+          "countries"
+        ],
+        "summary": "Get Countries",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ]
+      }
+    }
+  }
+}
