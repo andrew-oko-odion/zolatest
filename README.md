@@ -13,15 +13,16 @@ ruby '2.4.0'
 ## Installation (Set up Rails application)
 Follow these easy steps to install and start the app:
 
-# Fetch Gems 
+### Fetch Gems 
 First, install the gems required by the application:
-    `bundle`
 
-Edit 
-`config/database.yml` 
-with username and password for you Postgresql database.  
+	bundle
+
+	Edit `config/database.yml` 
+with username and password for you Postgresql database.
 
 Next, execute the database migrations/schema setup:
+	
 	`bundle exec rake db:setup`
 	
 Next, from the root of you the application, update cron jobs with:
@@ -30,8 +31,8 @@ Next, from the root of you the application, update cron jobs with:
 ### Start the server
     `rails server`
 
-Pointing your browser 
-`[http://localhost:3000](http://localhost:3000)` 
+	Pointing your browser 
+[http://localhost:3000](http://localhost:3000) 
  
- You can find endpoint documentation  by pointing your browser to [http://localhost:3000/api_docs/swagger/](http://localhost:3000/api_docs/swagger/)
+	You can find endpoint documentation  by pointing your browser to [http://localhost:3000/api_docs/swagger/](http://localhost:3000/api_docs/swagger/)
 	
