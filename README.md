@@ -22,14 +22,15 @@ Edit
 
 	config/database.yml
 	
-with username and password for you Postgresql database.  
+with username and password for you Postgresql database.
 
 Next, execute the database migrations/schema setup:
 
 	bundle exec rake db:setup
 	
 Next, from the root of you the application, update cron jobs with:
-`whenever --update-crontab `
+
+	`whenever --update-crontab `
 
 ### Start the server
 
