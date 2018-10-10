@@ -1,4 +1,3 @@
-require 'swagger_helper'
 
 RSpec.describe 'Countries', type: :request, capture_examples: true do
   path '/countries' do

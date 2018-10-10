@@ -1,7 +1,6 @@
-
+set :environment, "development"
 set :output, {:error => "log/cron_error_log.log", :standard => "log/cron_log.log"}
 
- every 60.minutes do
-   rake "pull_api_service_data:pull_data"
-   command "echo 'Local DB updated'"
+every 50.minutes do
+  runner "Country.update_db_with_api_data"
  end
